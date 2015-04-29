@@ -3,4 +3,5 @@ target/
 /.lib/
 .idea
 .idea_modules
-./fitnesse/FitNesseRoot/RecentChanges/
+fitnesse/FitNesseRoot/RecentChanges
+fitnesse/FitNesseRoot/**.zip
