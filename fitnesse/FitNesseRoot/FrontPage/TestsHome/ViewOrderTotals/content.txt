@@ -1,0 +1,5 @@
+!contents -R2 -g -p -f -h
+
+|Each order should show the customer info and an order summary with the total purchase amount|
+|The list should be sorted by date|
+|A message should indicate if there are no orders|
