@@ -55,6 +55,10 @@ object Tables {
 
   val inventoryItems = TableQuery[InventoryItems]
 
+  val orders = TableQuery[Orders]
+
+  val orderLines = TableQuery[OrderLines]
+
   val allCustomersQuery = {
     for {
       c <- customers
@@ -70,6 +74,11 @@ object Tables {
                                   ("0000002", "Screwdriver", 200, 2.99))
   )
 
+  val insertOrderData = DBIO.seq(
+    Tables.orders ++= Seq((1, "brian@banno.com", time("2015-04-23 10:10:10.0")),
+                          (2, "brian@banno.com", time("2015-04-29 04:01:13.0")))
+  )
+
   // DBIO Action which creates the schema
   val createSchemaAction = (customers.schema ++ inventoryItems.schema).create
 
@@ -80,5 +89,8 @@ object Tables {
   val createDatabase = DBIO.seq(createSchemaAction,
                                 insertCustomerData,
                                 insertInventoryItemData)
+
+
+  private def time(s: String) = Timestamp.valueOf(s)
 
 }

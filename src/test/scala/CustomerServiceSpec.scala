@@ -31,7 +31,7 @@ class CustomerServiceSpec extends Specification with Mockito with BeforeExample 
       mockRepo.findAllCustomers returns expected
       new CustomerService(mockRepo).findAllCustomers must_== expected
 
-      there were two(mockRepo).findAllCustomers
+      // there was one(mockRepo).findAllCustomers (needed if not stubbing)
     }
 
     "Retrieve all customers (from live DB)" >> {
