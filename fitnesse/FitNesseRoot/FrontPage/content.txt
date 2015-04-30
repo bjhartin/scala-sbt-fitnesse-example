@@ -1,5 +1,9 @@
+!3 Welcome to [[FitNesse][FitNesse.FitNesse]]! for the TDD Example project
+!5 ''It's a testing tool - it's a wiki - you'll love the coupling! :/''
+
 !contents -R2 -g -p -f -h
 
+!*****> Fitnesse Welcome Info
 !1 Welcome to [[FitNesse][FitNesse.FitNesse]]!
 !3 ''The fully integrated stand-alone acceptance testing framework and wiki.''
 # Here is a good place to add your first page (WikiWord). For example, MyTopLevelApplicationPage
@@ -12,5 +16,14 @@ To add your first "page", click the [[Edit][.FrontPage?edit]] button and add a [
 | [[User Guide][.FitNesse.UserGuide]] | ''Answer the rest of your questions here.'' |
 | [[Acceptance Tests][.FitNesse.SuiteAcceptanceTests]] | ''FitNesse's suite of Acceptance Tests'' |
 | [[Release Notes][.FitNesse.ReleaseNotes]] | ''Find out about FitNesse's new features'' |
+**********!
+
+!*****> Classpath & other wiring
+!path ./fitnesse.jar
+!path ./fitlibrary.jar
+!path ../target/scala-2.11/classes
+!path ../target/scala-2.11/test-classes
+!path ../lib_managed/**.jar
+**********!
 
 !note Release ${FITNESSE_VERSION}
