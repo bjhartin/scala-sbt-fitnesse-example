@@ -79,6 +79,14 @@ object Tables {
                           (2, "brian@banno.com", time("2015-04-29 04:01:13.0")))
   )
 
+  val insertOrderLineData = DBIO.seq(
+    Tables.orderLines ++= Seq(
+      (1, 1, "0000001", 3),
+      (2, 1, "0000002", 1),
+      (3, 2, "0000001", 1)
+    )
+  )
+
   // DBIO Action which creates the schema
   val createSchemaAction = (customers.schema ++ inventoryItems.schema).create
 
@@ -89,7 +97,8 @@ object Tables {
   val createDatabase = DBIO.seq(createSchemaAction,
                                 insertCustomerData,
                                 insertInventoryItemData,
-                                insertOrderData)
+                                insertOrderData,
+                                insertOrderLineData)
 
 
   private def time(s: String) = Timestamp.valueOf(s)
