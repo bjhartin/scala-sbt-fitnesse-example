@@ -1,5 +1,5 @@
 !*****< Set up the initial DoFixture
-!|slickexample.fitnesse.CustomerDoFixture|
+!|slickexample.CustomerDoFixture|
 **********!
 
 |given           |

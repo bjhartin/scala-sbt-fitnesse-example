@@ -1,4 +1,4 @@
-package slickexample.fitnesse
+package slickexample
 
 import fitlibrary.DoFixture
 
@@ -33,7 +33,9 @@ class CustomerDoFixture extends DoFixture {
 
   // This is only needed to get around a FitNesse bug that
   // will produce a harmless, but noisy, error message.
-  def slickexampleDotFitnesseDotCustomerDoFixture() = {}
+  def slickexampleDotCustomerDoFixture() = {}
+
+
 
   private def web = getTestingEngine
 }
