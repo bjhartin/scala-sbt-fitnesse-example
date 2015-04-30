@@ -88,7 +88,8 @@ object Tables {
   // Create database, composing create schema and insert sample data actions
   val createDatabase = DBIO.seq(createSchemaAction,
                                 insertCustomerData,
-                                insertInventoryItemData)
+                                insertInventoryItemData,
+                                insertOrderData)
 
 
   private def time(s: String) = Timestamp.valueOf(s)
