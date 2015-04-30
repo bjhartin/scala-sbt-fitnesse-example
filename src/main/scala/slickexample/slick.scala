@@ -11,6 +11,7 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   def db: Database
   def repo = new Repository(db)
   def customerService = new CustomerService(repo)
+  def orderService = new OrderService(repo)
 
   get("/db/create-db") {
     db.run(Tables.createDatabase)
@@ -27,7 +28,7 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   }
 
   get("/ordertotals") {
-    "someorders"
+    orderService.findAllOrders map {_.orderNo} mkString "\n"
   }
 }
 
