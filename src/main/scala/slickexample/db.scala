@@ -1,9 +1,7 @@
 package slickexample
 
 import org.scalatra.{ScalatraBase}
-
 import slick.driver.JdbcDriver.api._
-
 import java.sql.Timestamp
 
 object Tables {
@@ -57,7 +55,7 @@ object Tables {
 
   val inventoryItems = TableQuery[InventoryItems]
 
-  val findAllCustomers = {
+  val allCustomersQuery = {
     for {
       c <- customers
     } yield (c.email)
@@ -82,4 +80,5 @@ object Tables {
   val createDatabase = DBIO.seq(createSchemaAction,
                                 insertCustomerData,
                                 insertInventoryItemData)
+
 }

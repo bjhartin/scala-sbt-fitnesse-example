@@ -9,6 +9,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 trait SlickRoutes extends ScalatraBase with FutureSupport {
 
   def db: Database
+  def repo = new Repository(db)
 
   get("/db/create-db") {
     db.run(Tables.createDatabase)
@@ -21,27 +22,8 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   }
 
   get("/customers") {
-    db.run(Tables.findAllCustomers.result) map { xs =>
-      println(xs)
-      contentType = "text/plain"
-      xs map { case (email) => f"$email" } mkString "\n"
-    }
+    repo.findAllCustomers map {_.email} mkString "\n"
   }
-
-  /*
-  get("/formtest") {
-    contentType="text/html"
-    <html>
-    <head><title>Test</title>
-    </head>
-    <body>
-    <form method="GET" action="/coffees2">
-      <input type="submit" value="Show me the coffees"/>
-    </form>
-    </body>
-    </html>
-  }*/
-
 }
 
 class SlickApp(val db: Database) extends ScalatraServlet with FutureSupport with SlickRoutes {
