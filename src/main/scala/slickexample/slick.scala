@@ -28,7 +28,7 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   }
 
   get("/ordertotals") {
-    orderService.findAllOrders map {_.orderNo} mkString "\n"
+    orderService.findAllOrders mkString "\n"
   }
 }
 

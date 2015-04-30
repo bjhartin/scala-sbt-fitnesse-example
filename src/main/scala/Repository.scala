@@ -7,7 +7,9 @@ import java.sql.Timestamp
 
 case class Customer(email: String)
 
-case class Order(orderNo: Int, customerEmail: String, datePlaced: Timestamp)
+case class Order(orderNo: Int, customerEmail: String, datePlaced: Timestamp) {
+  override def toString = s"$orderNo $customerEmail $datePlaced $$5.00"
+}
 
 class Repository(db: Database) {
   import scala.concurrent.ExecutionContext.Implicits.global
@@ -20,7 +22,9 @@ class Repository(db: Database) {
 
   def findAllOrders: List[Order] = {
     Await.result(db.run(Tables.allOrdersQuery.result) map { xs =>
-      xs map { case (orderNo, custEmail, date) => Order(orderNo, custEmail, date)}
+                   xs map { case (orderNo, custEmail, date) =>
+                       Order(orderNo, custEmail, date)
+                     }
     }, 5 seconds).toList
   }
 }

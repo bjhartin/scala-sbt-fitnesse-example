@@ -38,18 +38,6 @@ object Tables {
     def * = (orderLineNo, orderNo, sku, quantity)
   }
 
-  // Retained from original scalatra example for reference
-
-  // A reified foreign key relation that can be navigated to create a join
-  // def supplier = foreignKey("SUP_FK", supID, suppliers)(_.id)
-
-  // Query, implicit inner join coffes and suppliers, return their names
-  // val findCoffeesWithSuppliers = {
-  //   for {
-  //     c <- coffees
-  //     s <- c.supplier
-  //   } yield (c.name, s.name)
-  // }
 
   val customers = TableQuery[Customers]
 
@@ -82,7 +70,7 @@ object Tables {
 
   val insertOrderData = DBIO.seq(
     Tables.orders ++= Seq((1, "brian@banno.com", time("2015-04-23 10:10:10.0")),
-                          (2, "brian@banno.com", time("2015-04-29 04:01:13.0")))
+                          (2, "adam@banno.com", time("2015-04-29 04:01:13.0")))
   )
 
   val insertOrderLineData = DBIO.seq(

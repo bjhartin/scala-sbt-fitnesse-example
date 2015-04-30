@@ -4,7 +4,6 @@ import org.specs2.mock.Mockito
 import org.specs2.mutable.Specification
 import org.mockito.Mockito._
 import org.mockito.Matchers._
-import org.specs2.mutable.Specification
 import java.sql.Timestamp
 
 class OrderServiceSpec extends Specification with Mockito {

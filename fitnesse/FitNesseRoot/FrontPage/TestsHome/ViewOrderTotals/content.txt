@@ -12,5 +12,5 @@
 
 |check|the response code is|200|
 
-|check|the page text is|!-1 bhartin@banno.com 2015-04-23 $20.96
-2 adam@banno.com 2015-04-29 $2.99-!|
+|check|the page text is|!-1 brian@banno.com 2015-04-23 10:10:10.0 $5.00
+2 adam@banno.com 2015-04-29 04:01:13.0 $5.00-!|
