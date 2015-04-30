@@ -1,5 +1,9 @@
 !contents -R2 -g -p -f -h
 
+!*****< Set up the initial DoFixture
+!|slickexample.OrderDoFixture|
+**********!
+
 |given|
 |a clean database|
 
