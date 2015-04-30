@@ -1,5 +1,12 @@
 !contents -R2 -g -p -f -h
 
-|Each order should show the customer info and an order summary with the total purchase amount|
-|The list should be sorted by date|
-|A message should indicate if there are no orders|
+|given|
+|a clean database|
+
+|when|
+|a user visits|/ordertotals|
+
+|check|the response code is|200|
+
+|check|the page text is|!-1 bhartin@banno.com 2015-04-23 $20.96
+2 adam@banno.com 2015-04-29 $2.99-!|

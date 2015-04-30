@@ -1,4 +1,12 @@
 !contents -R2 -g -p -f -h
 
+|given|
+|a clean database|
+|with no orders|
 
-|Visiting /orders should display a message if there are no orders|
+|when|
+|a user visits|/ordertotals|
+
+|check|the response code is|200|
+
+|check|the page text is|No orders exist|
