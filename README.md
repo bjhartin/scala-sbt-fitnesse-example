@@ -1,15 +1,20 @@
-# Route Test #
+# Scala, SBT and Fitnesse example #
 
-Corresponds to the guide at [http://scalatra.org/2.2/guides/persistence/slick.html](http://scalatra.org/2.2/guides/persistence/slick.html)
+A super simple example to illustrate acceptance test driven development in a short talk I'm giving for my employer.  Happens to integrate scala, SBT, Fitnesse around a simple Scalatra CRUD app.
 
 ## Build & Run ##
 
 ```sh
-$ git clone https://github.com/scalatra/scalatra-website-examples.git
-$ cd scalatra-website-examples/2.2/persistence/scalatra-slick
-$ chmod +x sbt
-$ ./sbt
-> container:start
+$ git clone https://github.com/bjhartin/scala-sbt-fitnesse-example
+$ sbt
+$ container:start
+$ open http://localhost:8080
 ```
 
-Now open the site's [root page](http://localhost:8080/) in your browser.
+## Fitnesse tests ##
+
+```sh
+$ cd fitnesse
+$ ./run.sh
+$ open http://localhost:9090
+```

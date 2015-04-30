@@ -11,4 +11,4 @@ import fitnesse.junit.FitNesseSuite.Name
 @Name("FrontPage.TestsHome")
 @FitnesseDir("fitnesse")
 @OutputDir("target/fitnesseOutput")
-class FitnesseRunner {}
+class FitnesseTest {}
