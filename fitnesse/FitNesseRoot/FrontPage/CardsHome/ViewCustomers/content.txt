@@ -1,12 +1,10 @@
-!contents -R2 -g -p -f -h
+!4 User Story
 
-!1 User Story
-
-|As a hardware store owner
+|!- As a hardware store owner
 I want to view a list of my registered customers
-So that I can contact them and make decisions based on customer volume.|
+So that I can contact them and make decisions based on customer volume.-!|
 
-!1 Acceptance Criteria
+!4 Acceptance Criteria
 
 |Visiting /customers should display a list of customers|
 |The list should be sorted by email address|

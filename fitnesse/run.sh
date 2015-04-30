@@ -1,1 +1,1 @@
-java -jar fitnesse.jar -p 9090
+java -jar fitnesse-standalone.jar -p 9090

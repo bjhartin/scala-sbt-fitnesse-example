@@ -1,6 +1,0 @@
-|import| 
-|com.knoldus.fixture|
-
-!|script | TaxCalculationFixture|
-|the tax for annual income|200000|is|30000|
-|the tax for annual income|100000|is|10000|

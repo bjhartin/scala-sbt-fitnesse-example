@@ -1,0 +1,6 @@
+!define TEST_SYSTEM {slim}
+!define USER_HOME {/Users/brianhartin}
+
+!path ${USER_HOME}/.sbt/boot/scala-2.11.5/lib/scala-library.jar
+!path  ${USER_HOME}/.ivy2/cache/org.fitnesse/fitlibrary/jars/fitlibrary-20080812.jar
+!path  ../target/scala-2.11.5/classes
