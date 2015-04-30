@@ -21,7 +21,6 @@ object ScalatraSlickBuild extends Build {
       version := Version,
       scalaVersion := ScalaVersion,
       retrieveManaged := true,
-      retrieveConfiguration := Some(new RetrieveConfiguration(new File("target/lib_managed"), Resolver.defaultRetrievePattern)),
       libraryDependencies ++= Seq(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
