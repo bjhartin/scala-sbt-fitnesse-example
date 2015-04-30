@@ -53,10 +53,15 @@ object Tables {
   //   } yield (c.name, s.name)
   // }
 
-
   val customers = TableQuery[Customers]
 
   val inventoryItems = TableQuery[InventoryItems]
+
+  val findAllCustomers = {
+    for {
+      c <- customers
+    } yield (c.email)
+  }
 
   val insertCustomerData = DBIO.seq(
     Tables.customers ++= Seq("brian@banno.com", "adam@banno.com")

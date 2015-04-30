@@ -1,5 +1,14 @@
-!contents -R2 -g -p -f -h
+!*****< Set up the initial DoFixture
+!|slickexample.fitnesse.CustomerDoFixture|
+**********!
 
-|CustomerDoFixture|
 |given           |
 |a clean database|
+
+|when|
+|a user visits|/customers|
+
+|check|the response code is|200|
+
+|check|the page text is|!-brian@banno.com
+adam@banno.com-!|

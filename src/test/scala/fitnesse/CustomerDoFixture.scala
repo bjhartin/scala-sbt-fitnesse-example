@@ -10,12 +10,30 @@ class CustomerDoFixture extends DoFixture {
 
   def given = this
 
-  def aCleanDatabase: Boolean = {
+  def then = this
+
+  def when = this
+
+  def aCleanDatabase = {
     beginAt("/db/create-db")
-    true
   }
 
-  def aListOfCustomers = true
+  def aUserVisits(path: String) = {
+    beginAt(path)
+  }
 
-  def aUserViews = true
+  def theResponseCodeIs: Int = {
+    web.getServerResponseCode
+  }
+
+  def thePageTextIs: String = {
+    web.getPageText
+  }
+
+
+  // This is only needed to get around a FitNesse bug that
+  // will produce a harmless, but noisy, error message.
+  def slickexampleDotFitnesseDotCustomerDoFixture() = {}
+
+  private def web = getTestingEngine
 }

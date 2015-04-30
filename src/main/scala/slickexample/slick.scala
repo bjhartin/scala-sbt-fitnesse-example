@@ -20,25 +20,15 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
     "Database dropped"
   }
 
-  /*
   get("/customers") {
-    db.run(Tables.findCoffeesWithSuppliers.result) map { xs =>
+    db.run(Tables.findAllCustomers.result) map { xs =>
       println(xs)
       contentType = "text/plain"
-      xs map { case (s1, s2) => f"  $s1 supplied by $s2" } mkString "\n"
+      xs map { case (email) => f"$email" } mkString "\n"
     }
   }
 
-  get("/coffees2") {
-    db.run(Tables.findCoffeesWithSuppliers.result) map { xs =>
-      println(xs)
-      contentType = "text/plain"
-      xs map { case (s1, s2) => f"  $s1 supplied by $s2" } mkString "\n"
-    }
-  }
-
-  // <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet"/>
-
+  /*
   get("/formtest") {
     contentType="text/html"
     <html>
