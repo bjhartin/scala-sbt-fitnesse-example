@@ -30,7 +30,7 @@ object ScalatraSlickBuild extends Build {
         "net.sourceforge.jwebunit" % "jwebunit-core" % "3.2" % "test",
         "net.sourceforge.jwebunit" % "jwebunit-htmlunit-plugin" % "3.2" % "test",
         "junit" % "junit" % "4.12" % "test",
-        "com.novocode" % "junit-interface" % "0.8" % "test->default",
+        "com.novocode" % "junit-interface" % "0.8" % "test",
         "ch.qos.logback" % "logback-classic" % "1.0.6" % "runtime",
         "com.typesafe.slick" %% "slick" % "3.0.0-RC1",
         "com.h2database" % "h2" % "1.4.181",

@@ -11,4 +11,7 @@ import fitnesse.junit.FitNesseSuite.Name
 @Name("FrontPage.TestsHome")
 @FitnesseDir("fitnesse")
 @OutputDir("target/fitnesseOutput")
-class FitnesseTest {}
+class FitnesseTest {
+  @Test
+  def placeholder = {} // Necessary for tests to run
+}
