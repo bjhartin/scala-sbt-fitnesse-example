@@ -1,0 +1,15 @@
+!4 User Story
+
+|!- As a hardware store owner
+I want to be able view the total revenue reduction due to discounted inventory items during a specified month
+So that I can better plan sales and promotions throughout the year
+And not offer too many discounts in one month-!|
+
+!4 Acceptance Criteria
+
+|Visiting /discounttotals/MONTH should show the total discounted amounts, by order, for that month|
+|MONTH should be represented as a number from 1 to 12|
+|MONTH should support zero-padded and non-zero-padded forms|
+|The list should show the order number, date and total discounted amount|
+|The list should be sorted by date|
+|The list should display the total discount amount at the bottom|

@@ -1,0 +1,11 @@
+!4 User Story
+
+|!- As a hardware store owner
+I want to view a list of all orders with their totals
+So that I can understand store performance and better plan promotions, sales, etc.-!|
+
+!4 Acceptance Criteria
+
+|Visiting /orders should display a list of orders|
+|Each order should show the customer info and an order summary with the total purchase amount|
+|The list should be sorted by date|
