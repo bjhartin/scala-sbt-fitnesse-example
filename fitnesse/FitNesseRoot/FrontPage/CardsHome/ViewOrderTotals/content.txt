@@ -9,3 +9,5 @@ So that I can understand store performance and better plan promotions, sales, et
 |Visiting /orders should display a list of orders|
 |Each order should show the customer info and an order summary with the total purchase amount|
 |The list should be sorted by date|
+
+|A message should indicate if there are no orders|
