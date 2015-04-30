@@ -12,7 +12,5 @@
 
 |check|the response code is|200|
 
-|abandon storytest|
-
 |check|the page text is|!-1 bhartin@banno.com 2015-04-23 $20.96
 2 adam@banno.com 2015-04-29 $2.99-!|

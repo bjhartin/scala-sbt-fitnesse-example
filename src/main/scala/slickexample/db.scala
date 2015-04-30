@@ -62,7 +62,13 @@ object Tables {
   val allCustomersQuery = {
     for {
       c <- customers
-    } yield (c.email)
+    } yield c.*
+  }
+
+  val allOrdersQuery = {
+    for {
+      o <- orders
+    } yield o.*
   }
 
   val insertCustomerData = DBIO.seq(
@@ -88,10 +94,10 @@ object Tables {
   )
 
   // DBIO Action which creates the schema
-  val createSchemaAction = (customers.schema ++ inventoryItems.schema).create
+  val createSchemaAction = (customers.schema ++ inventoryItems.schema ++ orders.schema ++ orderLines.schema).create
 
   // DBIO Action which drops the schema
-  val dropSchemaAction = (customers.schema ++ inventoryItems.schema).drop
+  val dropSchemaAction = (orderLines.schema ++ orders.schema ++ customers.schema ++ inventoryItems.schema).drop
 
   // Create database, composing create schema and insert sample data actions
   val createDatabase = DBIO.seq(createSchemaAction,

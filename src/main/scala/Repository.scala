@@ -18,5 +18,9 @@ class Repository(db: Database) {
     }, 5 seconds).toList
   }
 
-  def findAllOrders: List[Order] = Nil
+  def findAllOrders: List[Order] = {
+    Await.result(db.run(Tables.allOrdersQuery.result) map { xs =>
+      xs map { case (orderNo, custEmail, date) => Order(orderNo, custEmail, date)}
+    }, 5 seconds).toList
+  }
 }
