@@ -9,3 +9,5 @@ So that I can contact them and make decisions based on customer volume.-!|
 |Visiting /customers should display a list of customers|
 |The list should be sorted by email address|
 |The list should display the total customer count at the bottom|
+
+|If no customers exist, a message should be displayed to that effect|
