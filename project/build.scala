@@ -25,7 +25,7 @@ object ScalatraSlickBuild extends Build {
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
         "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
-        "org.fitnesse" % "fitnesse" % "20150226" % "test",
+        "org.fitnesse" % "fitnesse" % "20150424" % "test",
         "org.fitnesse" % "fitlibrary" % "20080812" % "test",
         "net.sourceforge.jwebunit" % "jwebunit-core" % "3.2" % "test",
         "net.sourceforge.jwebunit" % "jwebunit-htmlunit-plugin" % "3.2" % "test",

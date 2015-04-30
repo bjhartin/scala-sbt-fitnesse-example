@@ -8,5 +8,5 @@
 !path ./fitlibrary.jar
 !path ../target/scala-2.11/classes
 !path ../target/scala-2.11/test-classes
-!path ../target/lib_managed/**.jar
+!path ../lib_managed/**.jar
 **********!
