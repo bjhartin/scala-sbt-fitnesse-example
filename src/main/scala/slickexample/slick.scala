@@ -24,6 +24,10 @@ trait SlickRoutes extends ScalatraBase with FutureSupport {
   get("/customers") {
     repo.findAllCustomers map {_.email} mkString "\n"
   }
+
+  get("/ordertotals") {
+    "someorders"
+  }
 }
 
 class SlickApp(val db: Database) extends ScalatraServlet with FutureSupport with SlickRoutes {
