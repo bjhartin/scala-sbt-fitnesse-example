@@ -8,6 +8,6 @@ import scala.concurrent.Await
 
 class OrderService(repo: Repository) {
   def findAllOrders: List[Order] = {
-    Nil
+    repo.findAllOrders
   }
 }

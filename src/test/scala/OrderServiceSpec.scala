@@ -5,27 +5,13 @@ import org.specs2.mutable.Specification
 import org.mockito.Mockito._
 import org.mockito.Matchers._
 import org.specs2.mutable.Specification
-import org.specs2.specification.BeforeExample
-import slick.driver.JdbcDriver.api._
-import com.mchange.v2.c3p0.ComboPooledDataSource
+import java.sql.Timestamp
 
-class OrderServiceSpec extends Specification with Mockito with BeforeExample {
-  def db: Database = {
-    val cpds = new ComboPooledDataSource
-    Database.forDataSource(cpds)
-  }
-
-  def before {
-   db.run(Tables.dropSchemaAction)
-   db.run(Tables.createDatabase)
-  }
-
+class OrderServiceSpec extends Specification with Mockito {
   "An order service should" >> {
-    sequential
-
     "Retrieve all orders" >> {
       val mockRepo = mock[Repository]
-      val expected = Nil
+      val expected = List(Order(1, "me@me.com", new Timestamp(1)))
 
       mockRepo.findAllOrders returns expected
       new OrderService(mockRepo).findAllOrders must_== expected
