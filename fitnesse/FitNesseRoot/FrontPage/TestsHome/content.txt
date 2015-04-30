@@ -2,12 +2,11 @@
 
 !contents -R2 -g -p -f -h
 
+
 !*****> Classpath & other wiring
 !path ./fitnesse.jar
 !path ./fitlibrary.jar
 !path ../target/scala-2.11/classes
 !path ../target/scala-2.11/test-classes
-
-|Import|
-|slickexample.fitnesse|
+!path ../target/lib_managed/**.jar
 **********!

@@ -1,10 +1,5 @@
 !contents -R2 -g -p -f -h
 
-|Import                                 |
-|slickexample.fitnesse.CustomerDoFixture|
-
-|slickexample.fitnesse.CustomerDoFixture  |
-|given              |
-|a list of customers|
-
-
+|CustomerDoFixture|
+|given           |
+|a clean database|

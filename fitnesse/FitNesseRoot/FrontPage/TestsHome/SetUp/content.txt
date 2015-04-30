@@ -1,0 +1,6 @@
+This tells FitNesse to look in the slickexample.fitnesse package for fixture classes.
+
+|Import               |
+|slickexample.fitnesse|
+
+
