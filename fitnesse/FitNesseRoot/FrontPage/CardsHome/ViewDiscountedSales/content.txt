@@ -13,3 +13,5 @@ And not offer too many discounts in one month-!|
 |The list should show the order number, date and total discounted amount|
 |The list should be sorted by date|
 |The list should display the total discount amount at the bottom|
+
+|A message should indicate if no discounted sales occurred that month|
